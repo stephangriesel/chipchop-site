@@ -3,6 +3,8 @@ import styled from 'styled-components'
 import { FaPhone } from 'react-icons/fa'
 import { FaRegMap } from 'react-icons/fa'
 import { FaEnvelope } from 'react-icons/fa'
+import nl from '../../images/nl.svg'
+import gb from '../../images/gb.svg'
 
 
 export default function Footer() {
@@ -11,11 +13,38 @@ export default function Footer() {
             <div className='container'>
                 <div className="row blocks">
                     <div className='block'>
-                        <h5 className='pt-4'>CONTACT</h5>
+                        <h5 className='pt-4 flex-center-center'>ADDRESS</h5>
                         <div className='pt-4'>
-                            <p><FaRegMap /> Catharina Boudewijnshof 47, 1064 PE Amsterdam</p>
-                            <p><FaPhone /> 0615622376</p>
-                            <p><FaEnvelope /> chipchopamsterdam@gmail.com</p>
+                            <p><FaRegMap /> Trapgans 3a <br />Ankeveen <br /> 1244 RL <br /> Netherlands</p>
+                        </div>
+                    </div>
+                    <div className='block'>
+                        <h5 className='pt-4 flex-center-center'>CONTACT <span><img className='flag' src={nl} /></span></h5>
+                        <div className='pt-4'>
+                            <p><FaPhone /> Jørgen 0650626244</p>
+                            <p><FaEnvelope /><a href="mailto:jorgen@chipchop.nl"> jorgen@chipchop.nl</a></p>
+                        </div>
+                    </div>
+                    <div className='block'>
+                        <h5 className='pt-4 flex-center-center'>CONTACT <span><img className='flag' src={gb} /></span></h5>
+                        <div className='pt-4'>
+                            <p><FaPhone /> Marc 0615622376</p>
+                            <p><FaEnvelope /><a href="mailto:marc@chipchop.nl">marc@chipchop.nl</a></p>
+                        </div>
+                    </div>
+                    <div className='block'>
+                        <div>
+                            <h5 className='pt-4'>MENU</h5>
+                            <ul className='pt-4'>
+                                <li>Shop</li>
+                                <li>Portfolio</li>
+                                <li>Contact</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div className='block'>
+                        <div>
+                            <h5 className='pt-4'>SOCIAL</h5>
                         </div>
                         <div className='socials pt-5'>
                             {/* Facebook */}
@@ -60,16 +89,6 @@ export default function Footer() {
                             </svg>
                         </div>
                     </div>
-                    <div className='block'>
-                        <div>
-                            <h5 className='pt-4'>MENU</h5>
-                            <ul className='pt-4'>
-                                <li>Shop</li>
-                                <li>Portfolio</li>
-                                <li>Contact</li>
-                            </ul>
-                        </div>
-                    </div>
                 </div>
                 <div className="row">
                     <div className="col-10 mx-auto col-md-6 text-center text-capatalize pt-5">
@@ -88,6 +107,11 @@ display:flex;
 justify-content:space-evenly;
 ul {
     list-style:none;
+}
+
+.flag {
+    width:1em;
+    margin-bottom:0.3em;
 }
 .container {
     margin:30px;
@@ -140,7 +164,7 @@ ul {
             justify-content:left;
             display:flex;
             flex-direction:column;
-            width:50%;
+            width:20%;
             margin-right:20px;
         }
     }
