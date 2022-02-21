@@ -30,18 +30,6 @@ export default function Info() {
 }
 
 const Background = styled.section`
-.btn-pink {
-  color: var(--mainWhite);
-  border-color: var(--mainPink) solid;
-  background-color: var(--mainGrey);
-}
-.btn-pink:hover {
-  background: var(--mainPink);
-  color: var(--mainGrey);
-  border-color: var(--mainPink) solid;
-  -webkit-transition: ease-in 0.5s;
-  transition: ease-in 0.5s;
-}
 .info-section {
     /* background:rgba(236,236,236,0.5); */
     height:50vh;
