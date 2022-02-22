@@ -134,7 +134,15 @@ ul {
         }
     }
     .socials {
-        .fb-icon, .ig-icon {
+        .fb-icon {
+            background:white;
+            margin-right:5px;         
+            border-radius: 50%;
+            padding-right:5px;
+            width:30px;
+            height:30px;
+        }
+        .ig-icon {
             background:white;
             margin:5px;         
             border-radius: 50%;
@@ -163,7 +171,15 @@ ul {
         }
     }
     .socials {
-        .fb-icon, .ig-icon {
+        .fb-icon {
+            background:white;
+            margin-right:5px;         
+            border-radius: 50%;
+            padding-right:5px;
+            width:30px;
+            height:30px;
+        }
+        .ig-icon {
             background:white;
             margin:5px;         
             border-radius: 50%;
