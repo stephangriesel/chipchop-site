@@ -4,9 +4,11 @@ Blue: #d2e2e2
 Pink: #ebccca
 DimGray: #4b5b5a
 */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap");
 h1 {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Pathway Gothic One', sans-serif;
+  font-size: 3rem !important;
+  font-weight: 600 !important;
 }
 
 * {

@@ -4,7 +4,7 @@ export default function Title({ title }) {
     return (
         <div className="row">
             <div className="col text-center mb-3">
-                <h1 className="display-5 text-capitalize">{title}</h1>
+                <h1 className="display-5 text-uppercase">{title}</h1>
             </div>
         </div>
     )
