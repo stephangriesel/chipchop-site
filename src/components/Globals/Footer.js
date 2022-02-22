@@ -36,7 +36,7 @@ export default function Footer() {
                         <div>
                             <h5 className='pt-4'>SOCIAL</h5>
                         </div>
-                        <div className='socials pt-5'>
+                        <div className='socials pt-3'>
                             {/* Facebook */}
                             <svg
                                 width="24"
