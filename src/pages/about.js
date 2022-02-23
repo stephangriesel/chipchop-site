@@ -230,7 +230,7 @@ const Wrapper = styled(motion.main)`
           align-self: center;
           align-items:center;
           text-align:center;
-          height: auto;
+          height: 100%;
           width: 50%;
         }
       }

@@ -32,7 +32,7 @@ export default function Info() {
 const Background = styled.section`
 .info-section {
     /* background:rgba(236,236,236,0.5); */
-    height:50vh;
+    height:100%;
     display:flex;
     align-items:center;
     align-content:center;
@@ -46,7 +46,7 @@ const Background = styled.section`
 
 @media (min-width: 800px) {
 .info-section {
-    height:30vh;
+    height:100%;
     margin:50px 20px;
 }
 }

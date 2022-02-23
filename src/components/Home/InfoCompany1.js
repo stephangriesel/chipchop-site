@@ -26,7 +26,7 @@ export default function Info() {
 const Background = styled.section`
 .info-section {
     /* background:rgba(236,236,236,0.5); */
-    height:100vh;
+    height:100%;
     display:flex;
     align-items:center;
     align-content:center;
