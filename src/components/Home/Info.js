@@ -3,14 +3,28 @@ import Title from '../Globals/Title'
 import styled from 'styled-components'
 import { motion } from "framer-motion";
 import { InView } from 'react-intersection-observer';
+import { useTranslation, Trans } from 'react-i18next';
+
+const lngs = {
+    en: { nativeName: 'English' },
+    nl: { nativeName: 'Dutch' }
+};
 
 export default function Info() {
+    const { t, i18n } = useTranslation();
     return (
         <Background>
             <section className="py-5 info-section">
                 <div className="container"></div>
                 <Title title="our story"></Title>
                 <div className="row">
+                    <div>
+                        {Object.keys(lngs).map((lng) => (
+                            <button key={lng} style={{ fontWeight: i18n.resolvedLanguage === lng ? 'bold' : 'normal' }} type="submit" onClick={() => i18n.changeLanguage(lng)}>
+                                {lngs[lng].nativeName}
+                            </button>
+                        ))}
+                    </div>
                     <InView threshold={0.25} triggerOnce>
                         {({ ref, inView }) => (
                             <motion.div
@@ -21,7 +35,9 @@ export default function Info() {
                                 transition={{ duration: 0.6 }}
                             >
                                 <p className="lead text-muted mb-5">
-                                    Chipchop Amsterdam was founded in 2015 by Ma­rc Lineham. Yet it was way earlier that the self-taught hobbyist started gaining professional woodworking experience: pretty much at the same time as he started growing his iconic beard. Through his constant delivery of high-quality furniture, bespoke shop displays and stylish interior designs, he kept his customers coming back for more.
+                                    {/* <Trans i18nKey={description.part}> */}
+                                        Chipchop Amsterdam was founded in 2015 by Ma­rc Lineham. Yet it was way earlier that the self-taught hobbyist started gaining professional woodworking experience: pretty much at the same time as he started growing his iconic beard. Through his constant delivery of high-quality furniture, bespoke shop displays and stylish interior designs, he kept his customers coming back for more.
+                                    {/* </Trans> */}
                                 </p>
                             </motion.div>
                         )}
