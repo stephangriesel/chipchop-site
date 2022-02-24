@@ -18,13 +18,13 @@ export default function Info() {
                 <div className="container"></div>
                 <Title title="our story"></Title>
                 <div className="row">
-                    <div>
+                    {/* <div>
                         {Object.keys(lngs).map((lng) => (
                             <button key={lng} style={{ fontWeight: i18n.resolvedLanguage === lng ? 'bold' : 'normal' }} type="submit" onClick={() => i18n.changeLanguage(lng)}>
                                 {lngs[lng].nativeName}
                             </button>
                         ))}
-                    </div>
+                    </div> */}
                     <InView threshold={0.25} triggerOnce>
                         {({ ref, inView }) => (
                             <motion.div
