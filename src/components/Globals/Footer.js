@@ -38,7 +38,7 @@ export default function Footer() {
                         </div>
                         <div className='socials pt-3'>
                             {/* Facebook */}
-                            <svg
+                            <a href="https://www.facebook.com/chipchopamsterdam"><svg
                                 width="24"
                                 height="24"
                                 viewBox="0 0 24 24"
@@ -51,8 +51,9 @@ export default function Footer() {
                                     fill="currentColor"
                                 />
                             </svg>
+                            </a>
                             {/* Instagram */}
-                            <svg
+                            <a href="https://www.instagram.com/chipchop_amsterdam/"><svg
                                 width="24"
                                 height="24"
                                 viewBox="0 0 24 24"
@@ -77,6 +78,7 @@ export default function Footer() {
                                     fill="currentColor"
                                 />
                             </svg>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -91,6 +93,9 @@ export default function Footer() {
 }
 
 const FooterWrapper = styled.div`
+a {
+    color:var(--mainDark);
+}
 background:rgba(236,236,236,0.5);
 color: var(--mainDark);
 display:flex;
