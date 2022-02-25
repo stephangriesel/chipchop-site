@@ -9,6 +9,7 @@ import Footer from "../components/Globals/Footer"
 import SkillsOne from '../components/Skills/SkillsOne';
 import SkillsTwo from '../components/Skills/SkillsTwo';
 import SkillsThree from '../components/Skills/SkillsThree';
+import SkillsFour from '../components/Skills/SkillsFour';
 
 // import BackgroundSection from '../components/Globals/BackgroundSection';
 
@@ -23,6 +24,7 @@ const Skills = (props) => {
             <SkillsOne initial='hidden' ref={element} animate={controls} />
             <SkillsTwo initial='hidden' ref={element} animate={controls} />
             <SkillsThree initial='hidden' ref={element} animate={controls} />
+            <SkillsFour initial='hidden' ref={element} animate={controls} />
             <div className='spacer'></div>
           </div>
         </motion.div>

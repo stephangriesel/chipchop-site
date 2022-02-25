@@ -2,14 +2,14 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useScroll } from '../useScroll';
 import { fade } from '../../animation';
-import img from '../../images/furnitureinstallation.jpg'
+import img from '../../images/projects/project-nieuw-west.jpg'
 
 const SkillsOne = () => {
     const [element, controls] = useScroll();
     return (
         <div className='two-column-alt'>
             <div className='txt-box'>
-                <h1>FURNITURE INSTALLATION</h1>
+                <h1>PROJECT: NIEUW WEST</h1>
                 <p>Specialized Craft</p>
             </div>
             <motion.div
@@ -23,7 +23,7 @@ const SkillsOne = () => {
                     src={img}
                     alt='installation'
                     placeholder='tracedSVG'
-                    width={400}
+                    width={600}
                     className='border-radius-50' />
             </motion.div>
         </div>
