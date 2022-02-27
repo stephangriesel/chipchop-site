@@ -3,15 +3,15 @@ import Title from '../Globals/Title'
 import styled from 'styled-components'
 import { motion } from "framer-motion";
 import { InView } from 'react-intersection-observer';
-import { useTranslation, Trans } from 'react-i18next';
+// import { useTranslation, Trans } from 'react-i18next';
 
-const lngs = {
-    en: { nativeName: 'English' },
-    nl: { nativeName: 'Dutch' }
-};
+// const lngs = {
+//     en: { nativeName: 'English' },
+//     nl: { nativeName: 'Dutch' }
+// };
 
 export default function Info() {
-    const { t, i18n } = useTranslation();
+    // const { t, i18n } = useTranslation();
     return (
         <Background>
             <section className="py-5 info-section">

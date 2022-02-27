@@ -1,25 +1,53 @@
 import React from 'react'
 import Title from '../Globals/Title'
 import styled from 'styled-components'
+import { StaticQuery, graphql } from 'gatsby'
+
+const getAboutWhy = graphql`
+{
+    allContentfulAbout {
+    edges {
+      node {
+        whyBlock1 {
+          internal {
+            content
+          }
+        }
+        whyBlock2 {
+          internal {
+            content
+          }
+        }
+        whyTitle
+      }
+    }
+  }
+  }
+`
 
 export default function Info() {
     return (
-        <Background>
-            <section className="py-5 info-section">
-                <div className="container"></div>
-                <Title title="WHY CHIPCHOP"></Title>
-                <div className="row">
-                    <div className="col-10 col-sm-8 mx-auto text-center">
-                    <p className="lead text-muted mb-5">
-                        Furniture is a funny subject. Many people believe that filling their home with white cubes will make it seem larger and more clutter free. But then their personal space often turns out a little cold and then they would have wanted something more creative. 
-                        </p>
-                        <p className="lead text-muted mb-5">
-                        Now let’s look beyond the products and consider the process. Decorating your interior should be fun, right? While the IKEAs of this world make some great stuff for all budgets, their shopping experience is not fit for everyone, let alone couples ;-)
-                        </p>
-                    </div>
-                </div>
-            </section>
-        </Background>
+        <StaticQuery query={getAboutWhy} render={data => {
+            console.log("test data:", data)
+            return (
+                <Background>
+                    <section className="py-5 info-section">
+                        <div className="container"></div>
+                        <Title title={data.allContentfulAbout.edges[0].node.whyTitle}></Title>
+                        <div className="row">
+                            <div className="col-10 col-sm-8 mx-auto text-center">
+                                <p className="lead text-muted mb-5">
+                                    {data.allContentfulAbout.edges[0].node.whyBlock1.internal.content}
+                                </p>
+                                <p className="lead text-muted mb-5">
+                                    {data.allContentfulAbout.edges[0].node.whyBlock2.internal.content}
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+                </Background>
+            )
+        }} />
     )
 }
 
