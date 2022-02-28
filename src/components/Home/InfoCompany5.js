@@ -22,7 +22,7 @@ export default function Info() {
                     transition={{ duration: 0.6 }}
                   >
                     <span className="number">1</span>
-                    <span class="bold">CONTACT</span>
+                    <span className="bold">CONTACT</span>
                     Get in touch for an initial conversation about your ideas and needs.
                   </motion.p>
                 )}
@@ -37,7 +37,7 @@ export default function Info() {
                     transition={{ duration: 0.6 }}
                   >
                     <span className="number">2</span>
-                    <span class="bold">ESTIMATE</span>
+                    <span className="bold">ESTIMATE</span>
                     We’ll get back to you with a project outline and a cost estimate.
                   </motion.p>
                 )}
@@ -52,7 +52,7 @@ export default function Info() {
                     transition={{ duration: 0.6 }}
                   >
                     <span className="number">3</span>
-                    <span class="bold">DESIGN</span>
+                    <span className="bold">DESIGN</span>
                     Let us create the final design and give you a quote to sign off on.
                   </motion.p>
                 )}
@@ -67,7 +67,7 @@ export default function Info() {
                     transition={{ duration: 0.6 }}
                   >
                 <span className="number">4</span>
-                <span class="bold">PRODUCTION</span>
+                <span className="bold">PRODUCTION</span>
                 As we frequently share visual updates, you can oversee our progress.
                 </motion.p>
                 )}
@@ -82,7 +82,7 @@ export default function Info() {
                     transition={{ duration: 0.6 }}
                   >
                 <span className="number">5</span>
-                <span class="bold">INSTALLATION</span>
+                <span className="bold">INSTALLATION</span>
                 We deliver and install the finalized product with the greatest care.
                 </motion.p>
                 )}
@@ -97,7 +97,7 @@ export default function Info() {
                     transition={{ duration: 0.6 }}
                   >
                 <span className="number">6</span>
-                <span class="bold">AFTERCARE</span>
+                <span className="bold">AFTERCARE</span>
                 Should any problem arise, feel free to contact us and have us fix it.
                 </motion.p>
                 )}
