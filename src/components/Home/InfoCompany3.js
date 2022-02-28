@@ -8,7 +8,7 @@ const getAboutWhy = graphql`
     allContentfulAbout {
     edges {
       node {
-        ctaText
+        whyCtaText
         whyBlock5 {
           internal {
             content
@@ -40,7 +40,7 @@ export default function Info() {
                             <Link 
                                 to="/contact"
                                 >    
-                                   {data.allContentfulAbout.edges[0].node.ctaText}
+                                   {data.allContentfulAbout.edges[0].node.whyCtaText}
                             </Link>
                         </button>
                     </div>
