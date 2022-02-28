@@ -1,16 +1,37 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
+import { StaticQuery, graphql } from 'gatsby'
+
+const getAboutWhy = graphql`
+{
+    allContentfulAbout {
+    edges {
+      node {
+        ctaText
+        whyBlock5 {
+          internal {
+            content
+          }
+        }
+      }
+    }
+  }
+  }
+`
 
 export default function Info() {
     return (
+        <StaticQuery query={getAboutWhy} render={data => {
+            console.log("test data:", data)
+            return (
         <Background>
             <section className="py-5 info-section">
                 <div className="container"></div>
                 <div className="row">
                     <div className="col-10 col-sm-8 mx-auto text-center">
                         <p className="lead text-muted mb-5">
-                            The only thing you have to make, is an appointment.
+                        {data.allContentfulAbout.edges[0].node.whyBlock5.internal.content}
                         </p>
                         <button
                             type="submit"
@@ -19,13 +40,15 @@ export default function Info() {
                             <Link 
                                 to="/contact"
                                 >    
-                                   TALK TO US
+                                   {data.allContentfulAbout.edges[0].node.ctaText}
                             </Link>
                         </button>
                     </div>
                 </div>
             </section>
         </Background>
+    )
+            }} />
     )
 }
 
