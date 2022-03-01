@@ -1,27 +1,48 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
+import { StaticQuery, graphql } from 'gatsby'
+
+const getAboutApproach = graphql`
+{
+  allContentfulApproach {
+    edges {
+      node {
+        approachBlock8 {
+          approachBlock8
+        }
+        approachCtaText
+      }
+    }
+  }
+}
+`
 
 export default function Info() {
   return (
+    <StaticQuery query={getAboutApproach} render={data => {
+      console.log("test data:", data)
+      return (
     <Background>
       <section className="py-5 info-section">
         <div className="container"></div>
         <div className="row">
           <div className="col-10 col-sm-8 mx-auto text-center">
             <p className="lead text-muted mb-5">
-              Are you ready to start this journey?
+            {data.allContentfulApproach.edges[0].node.approachBlock8.approachBlock8}
             </p>
             <button
               type="submit"
               className="btn btn-pink btn-block text-capitalize mt-5"
             >
-              <Link to="/contact">CONTACT US</Link>
+              <Link to="/contact"> {data.allContentfulApproach.edges[0].node.approachCtaText}</Link>
             </button>
           </div>
         </div>
       </section>
     </Background>
+  )
+      }} />
   )
 }
 

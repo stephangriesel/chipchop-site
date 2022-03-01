@@ -2,10 +2,49 @@ import React from 'react'
 import styled from 'styled-components'
 import { motion } from "framer-motion";
 import { InView } from 'react-intersection-observer';
+import { StaticQuery, graphql } from 'gatsby'
+
+const getAboutApproach = graphql`
+{
+  allContentfulApproach {
+    edges {
+      node {
+        approachBlock2 {
+          approachBlock2
+        }
+        approachBlock2title
+        approachBlock3 {
+          approachBlock3
+        }
+        approachBlock3title
+        approachBlock4 {
+          approachBlock4
+        }
+        approachBlock4title
+        approachBlock5 {
+          approachBlock5
+        }
+        approachBlock5title
+        approachBlock6 {
+          approachBlock6
+        }
+        approachBlock6title
+        approachBlock7 {
+          approachBlock7
+        }
+        approachBlock7title
+      }
+    }
+  }
+}
+`
 
 export default function Info() {
 
   return (
+    <StaticQuery query={getAboutApproach} render={data => {
+      console.log("test data:", data)
+      return (
     <Background>
       <section className="py-5 info-section">
         <div className="container"></div>
@@ -22,8 +61,8 @@ export default function Info() {
                     transition={{ duration: 0.6 }}
                   >
                     <span className="number">1</span>
-                    <span className="bold">CONTACT</span>
-                    Get in touch for an initial conversation about your ideas and needs.
+                    <span className="bold">{data.allContentfulApproach.edges[0].node.approachBlock2title}</span>
+                    {data.allContentfulApproach.edges[0].node.approachBlock2.approachBlock2}
                   </motion.p>
                 )}
               </InView>
@@ -37,8 +76,8 @@ export default function Info() {
                     transition={{ duration: 0.6 }}
                   >
                     <span className="number">2</span>
-                    <span className="bold">ESTIMATE</span>
-                    We’ll get back to you with a project outline and a cost estimate.
+                    <span className="bold">{data.allContentfulApproach.edges[0].node.approachBlock3title}</span>
+                    {data.allContentfulApproach.edges[0].node.approachBlock3.approachBlock3}
                   </motion.p>
                 )}
               </InView>
@@ -52,8 +91,8 @@ export default function Info() {
                     transition={{ duration: 0.6 }}
                   >
                     <span className="number">3</span>
-                    <span className="bold">DESIGN</span>
-                    Let us create the final design and give you a quote to sign off on.
+                    <span className="bold">{data.allContentfulApproach.edges[0].node.approachBlock4title}</span>
+                    {data.allContentfulApproach.edges[0].node.approachBlock4.approachBlock4}
                   </motion.p>
                 )}
               </InView>
@@ -67,8 +106,8 @@ export default function Info() {
                     transition={{ duration: 0.6 }}
                   >
                 <span className="number">4</span>
-                <span className="bold">PRODUCTION</span>
-                As we frequently share visual updates, you can oversee our progress.
+                <span className="bold">{data.allContentfulApproach.edges[0].node.approachBlock5title}</span>
+                    {data.allContentfulApproach.edges[0].node.approachBlock5.approachBlock5}
                 </motion.p>
                 )}
               </InView>
@@ -82,8 +121,8 @@ export default function Info() {
                     transition={{ duration: 0.6 }}
                   >
                 <span className="number">5</span>
-                <span className="bold">INSTALLATION</span>
-                We deliver and install the finalized product with the greatest care.
+                <span className="bold">{data.allContentfulApproach.edges[0].node.approachBlock6title}</span>
+                    {data.allContentfulApproach.edges[0].node.approachBlock6.approachBlock6}
                 </motion.p>
                 )}
               </InView>
@@ -97,8 +136,8 @@ export default function Info() {
                     transition={{ duration: 0.6 }}
                   >
                 <span className="number">6</span>
-                <span className="bold">AFTERCARE</span>
-                Should any problem arise, feel free to contact us and have us fix it.
+                <span className="bold">{data.allContentfulApproach.edges[0].node.approachBlock7title}</span>
+                    {data.allContentfulApproach.edges[0].node.approachBlock7.approachBlock7}
                 </motion.p>
                 )}
               </InView>
@@ -107,6 +146,8 @@ export default function Info() {
         </div>
       </section>
     </Background>
+  )
+                }} />
   )
 }
 

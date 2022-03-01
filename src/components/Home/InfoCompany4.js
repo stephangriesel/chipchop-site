@@ -2,22 +2,46 @@ import React from 'react'
 // import { Link } from 'gatsby'
 import Title from '../Globals/Title'
 import styled from 'styled-components'
+import { StaticQuery, graphql } from 'gatsby'
+import ReactMarkdown from 'react-markdown'
+
+const getAboutApproach = graphql`
+{
+  allContentfulApproach {
+    edges {
+      node {
+        approachTitle
+        approachBlock1 {
+          approachBlock1
+        }
+      }
+    }
+  }
+}
+`
 
 export default function Info() {
   return (
+    <StaticQuery query={getAboutApproach} render={data => {
+      console.log("test data:", data)
+      return (
     <Background>
       <section className="py-5 info-section">
         <div className="container"></div>
-        <Title title="APPROACH"></Title>
+        <Title title={data.allContentfulApproach.edges[0].node.approachTitle}></Title>
         <div className="row">
           <div className="col-10 col-sm-8 mx-auto text-center">
             <p className="lead text-muted mb-5">
-              <strong className="bold">CUSTOM-MADE DESIGNS MADE SIMPLE</strong> - Without a smart process in place, design projects can be quite complex. Can’t see the woods for the trees? Then let us guide you, every step of the way.
+              <ReactMarkdown>
+                {data.allContentfulApproach.edges[0].node.approachBlock1.approachBlock1}
+              </ReactMarkdown>
             </p>
           </div>
         </div>
       </section>
     </Background>
+  )
+      }} />
   )
 }
 
