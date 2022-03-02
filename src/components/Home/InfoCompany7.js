@@ -2,22 +2,46 @@ import React from 'react'
 // import { Link } from 'gatsby'
 import Title from '../Globals/Title'
 import styled from 'styled-components'
+import { StaticQuery, graphql } from 'gatsby'
+import ReactMarkdown from 'react-markdown'
+
+const getAboutCoreValues = graphql`
+{
+  allContentfulCoreValues {
+    edges {
+      node {
+        coreValuesTitle
+        coreValuesBlock1 {
+          coreValuesBlock1
+        }
+      }
+    }
+  }
+}
+`
 
 export default function Info() {
   return (
+    <StaticQuery query={getAboutCoreValues} render={data => {
+      console.log("test data:", data)
+      return (
     <Background>
       <section className="py-5 info-section">
         <div className="container"></div>
-        <Title title="CORE VALUES"></Title>
+        <Title title={data.allContentfulCoreValues.edges[0].node.coreValuesTitle}></Title>
         <div className="row">
           <div className="col-10 col-sm-8 mx-auto text-center">
-            <p className="lead text-muted mb-5">
-              <strong className='bold'>HOW WE CREATE REAL VALUE</strong> - While creating your valuable products, we always stick to our core values in a pretty hardcore fashion.
+            <p className="text-muted mb-5">
+            <ReactMarkdown>
+            {data.allContentfulCoreValues.edges[0].node.coreValuesBlock1.coreValuesBlock1}
+            </ReactMarkdown>
             </p>
           </div>
         </div>
       </section>
     </Background>
+  )
+      }} />
   )
 }
 

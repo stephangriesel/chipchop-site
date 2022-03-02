@@ -31,7 +31,7 @@ export default function Info() {
         <Title title={data.allContentfulApproach.edges[0].node.approachTitle}></Title>
         <div className="row">
           <div className="col-10 col-sm-8 mx-auto text-center">
-            <p className="lead text-muted mb-5">
+            <p className="text-muted mb-5">
               <ReactMarkdown>
                 {data.allContentfulApproach.edges[0].node.approachBlock1.approachBlock1}
               </ReactMarkdown>
