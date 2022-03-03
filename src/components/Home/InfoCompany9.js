@@ -1,27 +1,48 @@
 import React from 'react'
 import styled from 'styled-components'
+import { StaticQuery, graphql } from 'gatsby'
 import { Link } from 'gatsby'
+
+const getAboutCoreValues = graphql`
+{
+  allContentfulCoreValues {
+    edges {
+      node {
+        coreValuesBlock7 {
+          coreValuesBlock7
+        }
+        coreValuesCtaText
+      }
+    }
+  }
+}
+`
 
 export default function Info() {
   return (
-    <Background>
-      <section className="py-5 info-section">
-        <div className="container"></div>
-        <div className="row">
-          <div className="col-10 col-sm-8 mx-auto text-center">
-            <p className="lead text-muted mb-5">
-            Shall we create some value together?
-            </p>
-            <button
-              type="submit"
-              className="btn btn-pink btn-block text-capitalize mt-5"
-            >
-              <Link to="/contact">GET IN TOUCH</Link>
-            </button>
-          </div>
-        </div>
-      </section>
-    </Background>
+    <StaticQuery query={getAboutCoreValues} render={data => {
+      console.log("test data:", data)
+      return (
+        <Background>
+          <section className="py-5 info-section">
+            <div className="container"></div>
+            <div className="row">
+              <div className="col-10 col-sm-8 mx-auto text-center">
+                <p className="lead text-muted mb-5">
+                {data.allContentfulCoreValues.edges[0].node.coreValuesBlock7.coreValuesBlock7}
+                </p>
+                <button
+                  type="submit"
+                  className="btn btn-pink btn-block text-capitalize mt-5"
+                >
+                  <Link to="/contact">{data.allContentfulCoreValues.edges[0].node.coreValuesCtaText}</Link>
+                </button>
+              </div>
+            </div>
+          </section>
+        </Background>
+      )
+    }} />
   )
 }
 
