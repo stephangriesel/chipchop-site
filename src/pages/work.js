@@ -11,6 +11,8 @@ import SkillsTwo from '../components/Skills/SkillsTwo';
 import SkillsThree from '../components/Skills/SkillsThree';
 import SkillsFour from '../components/Skills/SkillsFour';
 
+// import Project from '../components/Projects/Project';
+
 // import BackgroundSection from '../components/Globals/BackgroundSection';
 
 const Skills = (props) => {
@@ -21,6 +23,7 @@ const Skills = (props) => {
         <SEO title="Skills" />
         <motion.div initial='show' className='skills-wrapper'>
           <div className='overlay'>
+            {/* <Project  initial='hidden' ref={element} animate={controls} /> */}
             <SkillsOne initial='hidden' ref={element} animate={controls} />
             <SkillsTwo initial='hidden' ref={element} animate={controls} />
             <SkillsThree initial='hidden' ref={element} animate={controls} />

@@ -23,8 +23,10 @@ module.exports = {
       options: {
         spaceId: process.env.CONTENTFUL_ID,
         // Learn about environment variables: https://gatsby.dev/env-vars
-        accessToken: process.env.CONTENTFUL_TOKEN
+        accessToken: process.env.CONTENTFUL_TOKEN,
         // host: `preview.contentful.com`,
+        downloadLocal: true
+        // download images locally
       },
     },
     {
