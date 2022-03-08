@@ -7,7 +7,7 @@ import styled from 'styled-components'
 const Products = ({ data }) => {
 
   const { items: { info } } = data
-  // console.log("info page query data test", info);
+  console.log("info page query data test", info);
 
   const [filter, setFilter] = useState('All');
   const [treatments, setTreatments] = useState([])
@@ -25,11 +25,11 @@ const Products = ({ data }) => {
     setTreatments(filtered)
   }, [info, filter])
 
-  // console.log("filter test", filter)
+  console.log("filter test", filter)
 
   return (
     <Layout>
-      <SEO title="Treatments" />
+      <SEO title="Products | Coming soon" />
 
       <Labels>
         <div className="treatment-labels">

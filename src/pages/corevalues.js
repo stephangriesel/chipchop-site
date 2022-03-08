@@ -15,7 +15,7 @@ import Info9 from '../components/Home/InfoCompany9'
 
 const whyPage = ({ data }) => (
   <Layout>
-    <SEO title="Why ChipChop" />
+    <SEO title="Core Values" />
     <div style={{ backgroundColor: 'rgba(210,226,226,0.)' }}><Info7 /></div>
     <Parallax
       blur={{ min: -5, max: 0 }}

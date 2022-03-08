@@ -20,7 +20,7 @@ const Skills = (props) => {
   return (
     <Wrapper>
       <Layout>
-        <SEO title="Skills" />
+        <SEO title="Work" />
         <motion.div initial='show' className='skills-wrapper'>
           <div className='overlay'>
             {/* <Project  initial='hidden' ref={element} animate={controls} /> */}

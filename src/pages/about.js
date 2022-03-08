@@ -10,14 +10,12 @@ import SkillsOne from '../components/Skills/SkillsOne';
 import SkillsTwo from '../components/Skills/SkillsTwo';
 import SkillsThree from '../components/Skills/SkillsThree';
 
-// import BackgroundSection from '../components/Globals/BackgroundSection';
-
 const Skills = (props) => {
   const [element, controls] = useScroll();
   return (
     <Wrapper>
       <Layout>
-        <SEO title="Skills" />
+        <SEO title="About" />
         <motion.div initial='show' className='skills-wrapper'>
           <div className='overlay'>
             <SkillsOne initial='hidden' ref={element} animate={controls} />
