@@ -11,11 +11,7 @@ import SkillsTwo from '../components/Skills/SkillsTwo';
 import SkillsThree from '../components/Skills/SkillsThree';
 import SkillsFour from '../components/Skills/SkillsFour';
 
-// import Project from '../components/Projects/Project';
-
-// import BackgroundSection from '../components/Globals/BackgroundSection';
-
-const Skills = (props) => {
+const Work = (props) => {
   const [element, controls] = useScroll();
   return (
     <Wrapper>
@@ -23,7 +19,6 @@ const Skills = (props) => {
         <SEO title="Work" />
         <motion.div initial='show' className='skills-wrapper'>
           <div className='overlay'>
-            {/* <Project  initial='hidden' ref={element} animate={controls} /> */}
             <SkillsOne initial='hidden' ref={element} animate={controls} />
             <SkillsTwo initial='hidden' ref={element} animate={controls} />
             <SkillsThree initial='hidden' ref={element} animate={controls} />
@@ -43,10 +38,6 @@ const Wrapper = styled(motion.main)`
   .skills-wrapper {
     margin: 0 2em;
     margin-top: 12em;
-    .image-block {
-      /* height: 400px; */
-      /* position: relative; */
-    }
     .top-box {
       height: 80vh;
       background: rgba(255, 255, 255, 0.8);
@@ -73,7 +64,6 @@ const Wrapper = styled(motion.main)`
       }
     }
     .two-column {
-      /* height: 100vh; */
       display: flex;
       flex-direction: column-reverse;
       position:relative;
@@ -104,11 +94,9 @@ const Wrapper = styled(motion.main)`
         margin: 2em 0;
         h3 {
           margin: 0.5rem 2rem;
-          /* font-size: 2.25rem; */
         }
         p {
           margin: 0 2rem;
-          /* font-size: 1.25rem; */
         }
         ul {
           margin: 0 2rem;
@@ -116,7 +104,6 @@ const Wrapper = styled(motion.main)`
       }
     }
     .two-column-alt {
-      /* height: 100vh; */
       position:relative;
       z-index:-3;
       display: flex;
@@ -149,11 +136,9 @@ const Wrapper = styled(motion.main)`
         align-items:center;
         h3 {
           margin: 0.5rem 2rem;
-          /* font-size: 2.25rem; */
         }
         p {
           margin: 0 2rem;
-          /* font-size: 1.25rem; */
         }
         ul {
           margin: 0 2rem;
@@ -256,6 +241,6 @@ export const query = graphql`
     }
     `
 
-export default Skills;
+export default Work;
 
 
