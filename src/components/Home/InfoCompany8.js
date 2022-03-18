@@ -38,7 +38,7 @@ const getAboutCoreValues = graphql`
 export default function Info() {
   return (
     <StaticQuery query={getAboutCoreValues} render={data => {
-      console.log("test data:", data)
+      // console.log("test data:", data)
       return (
         <Background>
           <section className="py-5 info-section">

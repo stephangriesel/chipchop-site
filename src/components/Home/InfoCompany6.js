@@ -21,7 +21,7 @@ const getAboutApproach = graphql`
 export default function Info() {
   return (
     <StaticQuery query={getAboutApproach} render={data => {
-      console.log("test data:", data)
+      // console.log("test data:", data)
       return (
     <Background>
       <section className="py-5 info-section">

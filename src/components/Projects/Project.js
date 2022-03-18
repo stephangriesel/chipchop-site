@@ -33,7 +33,7 @@ const Project = () => {
     const [element, controls] = useScroll();
     return (
         <StaticQuery query={getProject} render={data => {
-            console.log("test data:", data)
+            // console.log("test data:", data)
             return (
                 <div className='two-column-alt'>
                     <div className='txt-box'>
