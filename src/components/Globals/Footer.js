@@ -19,13 +19,6 @@ export default function Footer() {
                         </div>
                     </div>
                     <div className='block'>
-                        <h5 className='pt-4 flex-center-center'>CONTACT <span><img className='flag' alt='flag' src={nl} /></span></h5>
-                        <div className='pt-4'>
-                            <p><FaPhone /> Jørgen 0650626244</p>
-                            <p><FaEnvelope /><a className="link-dark" href="mailto:jorgen@chipchop.nl"> jorgen@chipchop.nl</a></p>
-                        </div>
-                    </div>
-                    <div className='block'>
                         <h5 className='pt-4 flex-center-center'>CONTACT <span><img className='flag' alt='flag' src={gb} /></span></h5>
                         <div className='pt-4'>
                             <p><FaPhone /> Marc 0615622376</p>
