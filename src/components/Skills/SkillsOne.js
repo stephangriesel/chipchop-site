@@ -19,12 +19,30 @@ const SkillsOne = () => {
                 ref={element}
                 animate={controls}
             >
-                <img
-                    src={img}
-                    alt='installation'
-                    placeholder='tracedSVG'
-                    width={600}
-                    className='border-radius-50' />
+                {/* Slider main container */}
+                {/* <div class="swiper"> */}
+                    {/* Additional required wrapper */}
+                    {/* <div class="swiper-wrapper"> */}
+                        {/* Slides */}
+                        {/* <div class="swiper-slide"> */}
+                            <img
+                                src={img}
+                                alt='installation'
+                                placeholder='tracedSVG'
+                                width={600}
+                                className='border-radius-50' />
+                        {/* </div> */}
+                    {/* </div> */}
+                    {/* If we need pagination */}
+                    {/* <div class="swiper-pagination"></div> */}
+
+                    {/* If we need navigation buttons */}
+                    {/* <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div> */}
+
+                    {/* If we need scrollbar */}
+                    {/* <div class="swiper-scrollbar"></div> */}
+                {/* </div> */}
             </motion.div>
         </div>
     );
