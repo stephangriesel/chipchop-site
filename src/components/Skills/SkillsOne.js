@@ -2,12 +2,18 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useScroll } from '../useScroll';
 import { fade } from '../../animation';
+import { Swiper, SwiperSlide } from 'swiper/react/swiper-react.js';
 import img1 from '../../images/projects/project-nieuw-west1.jpg'
 import img2 from '../../images/projects/project-nieuw-west2.jpg'
 import img3 from '../../images/projects/project-nieuw-west3.jpg'
 
+import 'swiper/swiper-bundle.min.css'
+import 'swiper/swiper.min.css'
+
 const SkillsOne = () => {
+
     const [element, controls] = useScroll();
+
     return (
         <div className='two-column-alt'>
             <div className='txt-box'>
@@ -21,30 +27,37 @@ const SkillsOne = () => {
                 ref={element}
                 animate={controls}
             >
-                {/* Slider main container */}
-                {/* <div className="swiper"> */}
-                    {/* Additional required wrapper */}
-                    {/* <div className="swiper-wrapper"> */}
-                        {/* Slides */}
-                        {/* <div className="swiper-slide"> */}
-                            <img
-                                src={img1}
-                                alt='installation'
-                                placeholder='tracedSVG'
-                                width={600}
-                                className='border-radius-50' />
-                        {/* </div> */}
-                    {/* </div> */}
-                    {/* If we need pagination */}
-                    {/* <div class="swiper-pagination"></div> */}
-
-                    {/* If we need navigation buttons */}
-                    {/* <div className="swiper-button-prev"></div>
-                    <div className="swiper-button-next"></div> */}
-
-                    {/* If we need scrollbar */}
-                    {/* <div className="swiper-scrollbar"></div> */}
-                {/* </div> */}
+                {/* <Swiper
+                    spaceBetween={50}
+                    slidesPerView={3}
+                    onSlideChange={() => console.log('slide change')}
+                    onSwiper={(swiper) => console.log(swiper)}
+                >
+                    <SwiperSlide> */}
+                        <img
+                            src={img1}
+                            alt='installation'
+                            placeholder='tracedSVG'
+                            width={600}
+                            className='border-radius-50' />
+                    {/* </SwiperSlide>
+                    <SwiperSlide>
+                        <img
+                            src={img2}
+                            alt='installation'
+                            placeholder='tracedSVG'
+                            width={600}
+                            className='border-radius-50' />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <img
+                            src={img3}
+                            alt='installation'
+                            placeholder='tracedSVG'
+                            width={600}
+                            className='border-radius-50' />
+                    </SwiperSlide> */}
+                {/* </Swiper> */}
             </motion.div>
         </div>
     );
