@@ -2,13 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useScroll } from '../useScroll';
 import { fade } from '../../animation';
-import { Swiper, SwiperSlide } from 'swiper/react/swiper-react.js';
 import img1 from '../../images/projects/project-nieuw-west1.jpg'
-import img2 from '../../images/projects/project-nieuw-west2.jpg'
-import img3 from '../../images/projects/project-nieuw-west3.jpg'
 
-import 'swiper/swiper-bundle.min.css'
-import 'swiper/swiper.min.css'
 
 const SkillsOne = () => {
 
@@ -27,37 +22,12 @@ const SkillsOne = () => {
                 ref={element}
                 animate={controls}
             >
-                {/* <Swiper
-                    spaceBetween={50}
-                    slidesPerView={3}
-                    onSlideChange={() => console.log('slide change')}
-                    onSwiper={(swiper) => console.log(swiper)}
-                >
-                    <SwiperSlide> */}
-                        <img
-                            src={img1}
-                            alt='installation'
-                            placeholder='tracedSVG'
-                            width={600}
-                            className='border-radius-50' />
-                    {/* </SwiperSlide>
-                    <SwiperSlide>
-                        <img
-                            src={img2}
-                            alt='installation'
-                            placeholder='tracedSVG'
-                            width={600}
-                            className='border-radius-50' />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <img
-                            src={img3}
-                            alt='installation'
-                            placeholder='tracedSVG'
-                            width={600}
-                            className='border-radius-50' />
-                    </SwiperSlide> */}
-                {/* </Swiper> */}
+                <img
+                    src={img1}
+                    alt='installation'
+                    placeholder='tracedSVG'
+                    width={600}
+                    className='border-radius-50' />
             </motion.div>
         </div>
     );
