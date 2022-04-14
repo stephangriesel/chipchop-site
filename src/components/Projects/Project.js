@@ -8,9 +8,7 @@ import { StaticQuery, graphql } from 'gatsby';
 import { Swiper, SwiperSlide } from 'swiper/react/swiper-react.js';
 
 // Import Swiper styles
-import 'swiper/swiper.scss'; // core Swiper
-import 'swiper/modules/navigation/navigation.scss'; // Navigation module
-import 'swiper/modules/pagination/pagination.scss'; // Pagination module
+// import "./styles/swiper.css";
 
 // import required modules
 import { EffectFade, Navigation, Pagination } from "swiper";
@@ -76,13 +74,12 @@ const Project = () => {
                   className='border-radius-50' />
               </SwiperSlide>
               <SwiperSlide>
-                <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+                <img
+                  src={data.allContentfulProject.edges[0].node.image[1].localFile.childImageSharp.fixed.src}
+                  alt='installation'
+                  placeholder='tracedSVG'
+                  width={600}
+                  className='border-radius-50' />
               </SwiperSlide>
             </Swiper>
           </motion.div>
