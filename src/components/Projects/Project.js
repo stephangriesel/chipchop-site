@@ -3,12 +3,10 @@ import { motion } from 'framer-motion';
 import { useScroll } from '../useScroll';
 import { fade } from '../../animation';
 import { StaticQuery, graphql } from 'gatsby';
+import styled from 'styled-components';
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react/swiper-react.js';
-
-// Import Swiper styles
-// import "./styles/swiper.css";
 
 // import required modules
 import { EffectFade, Navigation, Pagination } from "swiper";
@@ -43,7 +41,7 @@ const Project = () => {
     <StaticQuery query={getProject} render={data => {
       // console.log("test data:", data)
       return (
-        <div className='two-column'>
+        <Wrapper>
           <div className='txt-box'>
             <h1>{data.allContentfulProject.edges[0].node.name}</h1>
             <p>Specialized Craft</p>
@@ -83,10 +81,20 @@ const Project = () => {
               </SwiperSlide>
             </Swiper>
           </motion.div>
-        </div>
+        </Wrapper>
       )
     }} />
   )
 };
+
+const Wrapper = styled.div`
+min-height: calc(100vh - 5rem);
+display:flex;
+justify-content:center;
+flex-direction:columm !important;
+.swiper {
+  max-width:38em;
+}
+`
 
 export default Project;
