@@ -24,7 +24,7 @@ export default function Header() {
 }
 
 const Wrapper = styled.div`
-z-index:1;
+z-index:2;
 position: sticky;
 top:0;
 margin-bottom:3em;

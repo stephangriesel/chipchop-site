@@ -11,6 +11,9 @@ import { Swiper, SwiperSlide } from 'swiper/react/swiper-react.js';
 // import required modules
 import { EffectFade, Navigation, Pagination } from "swiper";
 
+// Swiper styles 
+import './styles.css';
+
 const getProject = graphql`
 {
   allContentfulProject {
@@ -42,10 +45,6 @@ const Project = () => {
       // console.log("test data:", data)
       return (
         <Wrapper>
-          <div className='txt-box'>
-            <h1>{data.allContentfulProject.edges[0].node.name}</h1>
-            <p>Specialized Craft</p>
-          </div>
           <motion.div
             className='img-box'
             variants={fade}
@@ -81,6 +80,10 @@ const Project = () => {
               </SwiperSlide>
             </Swiper>
           </motion.div>
+          <div className='txt-box'>
+            <h1>{data.allContentfulProject.edges[0].node.name}</h1>
+            <p>Specialized Craft</p>
+          </div>
         </Wrapper>
       )
     }} />
@@ -91,9 +94,35 @@ const Wrapper = styled.div`
 min-height: calc(100vh - 5rem);
 display:flex;
 justify-content:center;
-flex-direction:columm !important;
+align-items:center;
+flex-direction:column;
+h1, p{
+  display:flex;
+  justify-content:center;
+}
+.txt-box {
+  height:50vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+.img-box {
+  width:100%;
+}
 .swiper {
   max-width:38em;
+}
+
+@media (min-width: 800px) {
+  display:flex;
+  flex-direction:row;
+  width:100%;
+  .txt-box {
+    width:50%;
+  }
+  .img-box {
+    width:50%;
+  }
 }
 `
 
