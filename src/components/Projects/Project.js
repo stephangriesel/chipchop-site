@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useScroll } from '../useScroll';
-import { fade } from '../../animation';
+// import { fade } from '../../animation';
 import { StaticQuery, graphql } from 'gatsby';
 import styled from 'styled-components';
 
@@ -48,14 +48,14 @@ const Project = () => {
         <Wrapper>
           <motion.div
             className='img-box'
-            variants={fade}
+            // variants={fade}
             initial='hidden'
             ref={element}
             animate={controls}
           >
             <Swiper
               spaceBetween={30}
-              effect={"fade"}
+              // effect={"fade"}
               navigation={true}
               pagination={{
                 clickable: true,
@@ -89,14 +89,14 @@ const Project = () => {
         <Wrapper>
           <motion.div
             className='img-box'
-            variants={fade}
+            // variants={fade}
             initial='hidden'
             ref={element}
             animate={controls}
           >
             <Swiper
               spaceBetween={30}
-              effect={"fade"}
+              // effect={"fade"}
               navigation={true}
               pagination={{
                 clickable: true,
