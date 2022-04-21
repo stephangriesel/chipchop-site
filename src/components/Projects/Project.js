@@ -44,6 +44,7 @@ const Project = () => {
     <StaticQuery query={getProject} render={data => {
       // console.log("test data:", data)
       return (
+        <>
         <Wrapper>
           <motion.div
             className='img-box'
@@ -85,6 +86,48 @@ const Project = () => {
             <p>Specialized Craft</p>
           </div>
         </Wrapper>
+        <Wrapper>
+          <motion.div
+            className='img-box'
+            variants={fade}
+            initial='hidden'
+            ref={element}
+            animate={controls}
+          >
+            <Swiper
+              spaceBetween={30}
+              effect={"fade"}
+              navigation={true}
+              pagination={{
+                clickable: true,
+              }}
+              modules={[EffectFade, Navigation, Pagination]}
+              className="mySwiper"
+            >
+              <SwiperSlide>
+                <img
+                  src={data.allContentfulProject.edges[1].node.image[0].localFile.childImageSharp.fixed.src}
+                  alt='installation'
+                  placeholder='tracedSVG'
+                  width={600}
+                  className='border-radius-50' />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img
+                  src={data.allContentfulProject.edges[1].node.image[1].localFile.childImageSharp.fixed.src}
+                  alt='installation'
+                  placeholder='tracedSVG'
+                  width={600}
+                  className='border-radius-50' />
+              </SwiperSlide>
+            </Swiper>
+          </motion.div>
+          <div className='txt-box'>
+            <h1>{data.allContentfulProject.edges[0].node.name}</h1>
+            <p>Specialized Craft</p>
+          </div>
+        </Wrapper>
+        </>
       )
     }} />
   )
@@ -117,6 +160,7 @@ h1, p{
   display:flex;
   flex-direction:row;
   width:100%;
+  margin:0 5em;
   .txt-box {
     width:50%;
   }
