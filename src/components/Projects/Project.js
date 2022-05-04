@@ -83,7 +83,7 @@ const Project = () => {
           </motion.div>
           <div className='txt-box'>
             <h1>{data.allContentfulProject.edges[0].node.name}</h1>
-            <p>Specialized Craft</p>
+            <p>{data.allContentfulProject.edges[0].node.description.description}</p>
           </div>
         </Wrapper>
         <Wrapper>
@@ -123,8 +123,8 @@ const Project = () => {
             </Swiper>
           </motion.div>
           <div className='txt-box'>
-            <h1>{data.allContentfulProject.edges[0].node.name}</h1>
-            <p>Specialized Craft</p>
+            <h1>{data.allContentfulProject.edges[1].node.name}</h1>
+            <p>{data.allContentfulProject.edges[0].node.description.description}</p>
           </div>
         </Wrapper>
         <Wrapper>
@@ -188,8 +188,8 @@ const Project = () => {
             </Swiper>
           </motion.div>
           <div className='txt-box'>
-            <h1>{data.allContentfulProject.edges[0].node.name}</h1>
-            <p>Specialized Craft</p>
+            <h1>{data.allContentfulProject.edges[2].node.name}</h1>
+            <p>{data.allContentfulProject.edges[0].node.description.description}</p>
           </div>
         </Wrapper>
         <Wrapper>
@@ -229,8 +229,8 @@ const Project = () => {
             </Swiper>
           </motion.div>
           <div className='txt-box'>
-            <h1>{data.allContentfulProject.edges[0].node.name}</h1>
-            <p>Specialized Craft</p>
+            <h1>{data.allContentfulProject.edges[3].node.name}</h1>
+            <p>{data.allContentfulProject.edges[3].node.description.description}</p>
           </div>
         </Wrapper>
         </>
