@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useScroll } from '../useScroll';
-// import { fade } from '../../animation';
 import { StaticQuery, graphql } from 'gatsby';
 import styled from 'styled-components';
 
@@ -45,194 +44,194 @@ const Project = () => {
       // console.log("test data:", data)
       return (
         <>
-        <Wrapper>
-          <motion.div
-            className='img-box'
-            // variants={fade}
-            initial='hidden'
-            ref={element}
-            animate={controls}
-          >
-            <Swiper
-              spaceBetween={30}
-              // effect={"fade"}
-              navigation={true}
-              pagination={{
-                clickable: true,
-              }}
-              modules={[EffectFade, Navigation, Pagination]}
-              className="mySwiper"
+          <Wrapper>
+            <motion.div
+              className='img-box'
+              // variants={fade}
+              initial='hidden'
+              ref={element}
+              animate={controls}
             >
-              <SwiperSlide>
-                <img
-                  src={data.allContentfulProject.edges[0].node.image[0].localFile.childImageSharp.fixed.src}
-                  alt='installation'
-                  placeholder='tracedSVG'
-                  width={600}
-                  className='border-radius-50' />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img
-                  src={data.allContentfulProject.edges[0].node.image[1].localFile.childImageSharp.fixed.src}
-                  alt='installation'
-                  placeholder='tracedSVG'
-                  width={600}
-                  className='border-radius-50' />
-              </SwiperSlide>
-            </Swiper>
-          </motion.div>
-          <div className='txt-box'>
-            <h1>{data.allContentfulProject.edges[0].node.name}</h1>
-            <p>{data.allContentfulProject.edges[0].node.description.description}</p>
-          </div>
-        </Wrapper>
-        <Wrapper>
-          <motion.div
-            className='img-box'
-            // variants={fade}
-            initial='hidden'
-            ref={element}
-            animate={controls}
-          >
-            <Swiper
-              spaceBetween={30}
-              // effect={"fade"}
-              navigation={true}
-              pagination={{
-                clickable: true,
-              }}
-              modules={[EffectFade, Navigation, Pagination]}
-              className="mySwiper"
+              <Swiper
+                spaceBetween={30}
+                // effect={"fade"}
+                navigation={true}
+                pagination={{
+                  clickable: true,
+                }}
+                modules={[EffectFade, Navigation, Pagination]}
+                className="mySwiper"
+              >
+                <SwiperSlide>
+                  <img
+                    src={data.allContentfulProject.edges[0].node.image[0].localFile.childImageSharp.fixed.src}
+                    alt='installation'
+                    placeholder='tracedSVG'
+                    width={600}
+                    className='border-radius-50' />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img
+                    src={data.allContentfulProject.edges[0].node.image[1].localFile.childImageSharp.fixed.src}
+                    alt='installation'
+                    placeholder='tracedSVG'
+                    width={600}
+                    className='border-radius-50' />
+                </SwiperSlide>
+              </Swiper>
+            </motion.div>
+            <div className='txt-box'>
+              <h1>{data.allContentfulProject.edges[0].node.name}</h1>
+              <p>{data.allContentfulProject.edges[0].node.description.description}</p>
+            </div>
+          </Wrapper>
+          <Wrapper>
+            <motion.div
+              className='img-box'
+              // variants={fade}
+              initial='hidden'
+              ref={element}
+              animate={controls}
             >
-              <SwiperSlide>
-                <img
-                  src={data.allContentfulProject.edges[1].node.image[0].localFile.childImageSharp.fixed.src}
-                  alt='installation'
-                  placeholder='tracedSVG'
-                  width={600}
-                  className='border-radius-50' />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img
-                  src={data.allContentfulProject.edges[1].node.image[1].localFile.childImageSharp.fixed.src}
-                  alt='installation'
-                  placeholder='tracedSVG'
-                  width={600}
-                  className='border-radius-50' />
-              </SwiperSlide>
-            </Swiper>
-          </motion.div>
-          <div className='txt-box'>
-            <h1>{data.allContentfulProject.edges[1].node.name}</h1>
-            <p>{data.allContentfulProject.edges[0].node.description.description}</p>
-          </div>
-        </Wrapper>
-        <Wrapper>
-          <motion.div
-            className='img-box'
-            // variants={fade}
-            initial='hidden'
-            ref={element}
-            animate={controls}
-          >
-            <Swiper
-              spaceBetween={30}
-              // effect={"fade"}
-              navigation={true}
-              pagination={{
-                clickable: true,
-              }}
-              modules={[EffectFade, Navigation, Pagination]}
-              className="mySwiper"
+              <Swiper
+                spaceBetween={30}
+                // effect={"fade"}
+                navigation={true}
+                pagination={{
+                  clickable: true,
+                }}
+                modules={[EffectFade, Navigation, Pagination]}
+                className="mySwiper"
+              >
+                <SwiperSlide>
+                  <img
+                    src={data.allContentfulProject.edges[1].node.image[0].localFile.childImageSharp.fixed.src}
+                    alt='installation'
+                    placeholder='tracedSVG'
+                    width={600}
+                    className='border-radius-50' />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img
+                    src={data.allContentfulProject.edges[1].node.image[1].localFile.childImageSharp.fixed.src}
+                    alt='installation'
+                    placeholder='tracedSVG'
+                    width={600}
+                    className='border-radius-50' />
+                </SwiperSlide>
+              </Swiper>
+            </motion.div>
+            <div className='txt-box'>
+              <h1>{data.allContentfulProject.edges[1].node.name}</h1>
+              <p>{data.allContentfulProject.edges[0].node.description.description}</p>
+            </div>
+          </Wrapper>
+          <Wrapper>
+            <motion.div
+              className='img-box'
+              // variants={fade}
+              initial='hidden'
+              ref={element}
+              animate={controls}
             >
-              <SwiperSlide>
-                <img
-                  src={data.allContentfulProject.edges[2].node.image[0].localFile.childImageSharp.fixed.src}
-                  alt='installation'
-                  placeholder='tracedSVG'
-                  width={600}
-                  className='border-radius-50' />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img
-                  src={data.allContentfulProject.edges[2].node.image[1].localFile.childImageSharp.fixed.src}
-                  alt='installation'
-                  placeholder='tracedSVG'
-                  width={600}
-                  className='border-radius-50' />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img
-                  src={data.allContentfulProject.edges[2].node.image[2].localFile.childImageSharp.fixed.src}
-                  alt='installation'
-                  placeholder='tracedSVG'
-                  width={600}
-                  className='border-radius-50' />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img
-                  src={data.allContentfulProject.edges[2].node.image[3].localFile.childImageSharp.fixed.src}
-                  alt='installation'
-                  placeholder='tracedSVG'
-                  width={600}
-                  className='border-radius-50' />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img
-                  src={data.allContentfulProject.edges[2].node.image[4].localFile.childImageSharp.fixed.src}
-                  alt='installation'
-                  placeholder='tracedSVG'
-                  width={600}
-                  className='border-radius-50' />
-              </SwiperSlide>
-            </Swiper>
-          </motion.div>
-          <div className='txt-box'>
-            <h1>{data.allContentfulProject.edges[2].node.name}</h1>
-            <p>{data.allContentfulProject.edges[0].node.description.description}</p>
-          </div>
-        </Wrapper>
-        <Wrapper>
-          <motion.div
-            className='img-box'
-            // variants={fade}
-            initial='hidden'
-            ref={element}
-            animate={controls}
-          >
-            <Swiper
-              spaceBetween={30}
-              // effect={"fade"}
-              navigation={true}
-              pagination={{
-                clickable: true,
-              }}
-              modules={[EffectFade, Navigation, Pagination]}
-              className="mySwiper"
+              <Swiper
+                spaceBetween={30}
+                // effect={"fade"}
+                navigation={true}
+                pagination={{
+                  clickable: true,
+                }}
+                modules={[EffectFade, Navigation, Pagination]}
+                className="mySwiper"
+              >
+                <SwiperSlide>
+                  <img
+                    src={data.allContentfulProject.edges[2].node.image[0].localFile.childImageSharp.fixed.src}
+                    alt='installation'
+                    placeholder='tracedSVG'
+                    width={600}
+                    className='border-radius-50' />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img
+                    src={data.allContentfulProject.edges[2].node.image[1].localFile.childImageSharp.fixed.src}
+                    alt='installation'
+                    placeholder='tracedSVG'
+                    width={600}
+                    className='border-radius-50' />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img
+                    src={data.allContentfulProject.edges[2].node.image[2].localFile.childImageSharp.fixed.src}
+                    alt='installation'
+                    placeholder='tracedSVG'
+                    width={600}
+                    className='border-radius-50' />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img
+                    src={data.allContentfulProject.edges[2].node.image[3].localFile.childImageSharp.fixed.src}
+                    alt='installation'
+                    placeholder='tracedSVG'
+                    width={600}
+                    className='border-radius-50' />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img
+                    src={data.allContentfulProject.edges[2].node.image[4].localFile.childImageSharp.fixed.src}
+                    alt='installation'
+                    placeholder='tracedSVG'
+                    width={600}
+                    className='border-radius-50' />
+                </SwiperSlide>
+              </Swiper>
+            </motion.div>
+            <div className='txt-box'>
+              <h1>{data.allContentfulProject.edges[2].node.name}</h1>
+              <p>{data.allContentfulProject.edges[0].node.description.description}</p>
+            </div>
+          </Wrapper>
+          <Wrapper>
+            <motion.div
+              className='img-box'
+              // variants={fade}
+              initial='hidden'
+              ref={element}
+              animate={controls}
             >
-              <SwiperSlide>
-                <img
-                  src={data.allContentfulProject.edges[3].node.image[0].localFile.childImageSharp.fixed.src}
-                  alt='installation'
-                  placeholder='tracedSVG'
-                  width={600}
-                  className='border-radius-50' />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img
-                  src={data.allContentfulProject.edges[3].node.image[1].localFile.childImageSharp.fixed.src}
-                  alt='installation'
-                  placeholder='tracedSVG'
-                  width={600}
-                  className='border-radius-50' />
-              </SwiperSlide>
-            </Swiper>
-          </motion.div>
-          <div className='txt-box'>
-            <h1>{data.allContentfulProject.edges[3].node.name}</h1>
-            <p>{data.allContentfulProject.edges[3].node.description.description}</p>
-          </div>
-        </Wrapper>
+              <Swiper
+                spaceBetween={30}
+                // effect={"fade"}
+                navigation={true}
+                pagination={{
+                  clickable: true,
+                }}
+                modules={[EffectFade, Navigation, Pagination]}
+                className="mySwiper"
+              >
+                <SwiperSlide>
+                  <img
+                    src={data.allContentfulProject.edges[3].node.image[0].localFile.childImageSharp.fixed.src}
+                    alt='installation'
+                    placeholder='tracedSVG'
+                    width={600}
+                    className='border-radius-50' />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img
+                    src={data.allContentfulProject.edges[3].node.image[1].localFile.childImageSharp.fixed.src}
+                    alt='installation'
+                    placeholder='tracedSVG'
+                    width={600}
+                    className='border-radius-50' />
+                </SwiperSlide>
+              </Swiper>
+            </motion.div>
+            <div className='txt-box'>
+              <h1>{data.allContentfulProject.edges[3].node.name}</h1>
+              <p>{data.allContentfulProject.edges[3].node.description.description}</p>
+            </div>
+          </Wrapper>
         </>
       )
     }} />
@@ -265,15 +264,17 @@ h1, p{
 @media (min-width: 800px) {
   display:flex;
   flex-direction:row;
+  :nth-child(even) {
+    flex-direction:row-reverse;
+  }
+  }
   width:100%;
-  margin:0 5em;
   .txt-box {
     width:50%;
   }
   .img-box {
     width:50%;
   }
-}
 `
 
 export default Project;
