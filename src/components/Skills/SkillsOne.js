@@ -1,4 +1,6 @@
 import React from 'react';
+import Lightbox from '../Globals/Lightbox';
+
 import { motion } from 'framer-motion';
 import { useScroll } from '../useScroll';
 import { fade } from '../../animation';
@@ -15,6 +17,7 @@ const SkillsOne = () => {
                 <h1>PROJECT: NIEUW WEST</h1>
                 <p>Specialized Craft</p>
             </div>
+            {/* <Lightbox> */}
             <motion.div
                 className='img-box'
                 variants={fade}
@@ -29,6 +32,7 @@ const SkillsOne = () => {
                     width={600}
                     className='border-radius-50' />
             </motion.div>
+            {/* </Lightbox> */}
         </div>
     );
 };
